@@ -15,4 +15,8 @@ server.use(express.json());
 server.use('/api/auth', authRouter);
 server.use('/api/jokes', authenticate, jokesRouter);
 
+server.get('/', (req, res) => {
+  res.send('<h1>Node Authentication Sprint Challenge</h1><h2>Michael Phelps</h2>')
+})
+
 module.exports = server;
