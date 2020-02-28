@@ -52,7 +52,7 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What are the three parts of the JSON Web Token?
 
-  The three parts of the JWT are the Header, the Payload, and the Signature. The payload consists of an object that contains any data you wish to persist. This is GENERALLY the user ID, and user name. 
+  The three parts of the JWT are the Header, the Payload, and the Signature. The payload consists of an object that contains any data you wish to persist. This is GENERALLY the user ID, and user name.
 
 ## Minimum Viable Product
 
