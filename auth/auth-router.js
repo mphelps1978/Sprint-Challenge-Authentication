@@ -27,7 +27,7 @@ router.post('/login', (req, res) => {
     });
 });
 
-router.post('/register', (req, res) => {
+router.post('/register', checkInput, (req, res) => {
   let user = req.body;
   const hash = bcrypt.hashSync(user.password, 10); // 2 ^ n
   user.password = hash;
@@ -55,6 +55,15 @@ function generateToken(user) {
   };
 
   return jwt.sign(payload, jwtSecret, options);
+}
+
+function checkInput(req, res, next) {
+  const {username, password} = req.body
+  if (!req.body || !username || !password) {
+    res.status(400).json({message: 'Please ensure Username and password are present'})
+  } else {
+    next()
+  }
 }
 
   module.exports = router;
