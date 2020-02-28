@@ -40,11 +40,19 @@ Demonstrate your understanding of this week's concepts by answering the followin
 
 - [ ] What is the purpose of using _sessions_?
 
+    - Sessions are a way of storing persistent data on the server. This could be authentication data, or other pertinent data that may or may not be needed in order to use the server.
+
 - [ ] What does bcrypt do to help us store passwords in a secure manner.
+
+    - bcrypt is a hashing algorithm. It can take a password, or any other form of data, and hash it into a string.
 
 - [ ] What does bcrypt do to slow down attackers?
 
+  - bCrypt can hash over a string multiple times, each time making it harder and harder to decode.
+
 - [ ] What are the three parts of the JSON Web Token?
+
+  The three parts of the JWT are the Header, the Payload, and the Signature. The payload consists of an object that contains any data you wish to persist. This is GENERALLY the user ID, and user name. 
 
 ## Minimum Viable Product
 
